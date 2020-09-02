@@ -74,7 +74,8 @@ const incrementCount = (label) => {
         [label]: firebase.firestore.FieldValue.increment(1)
     }).then(() => {
         alert("Your Response has been recorded. Thank You");
-        window.location.href = `http://127.0.0.1:5500/index.html`;
+        var base_url = window.location.origin;
+        window.location.href = `${base_url}/index.html`;
     });
 }
 

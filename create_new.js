@@ -49,7 +49,8 @@ const createNewPoll = (e) => {
     db.collection("polls").add(newPoll)
         .then(function (docRef) {
             console.log("Document written with ID: ", docRef.id);
-            window.location.replace(`http://127.0.0.1:5500/chart.html?pollid=${docRef.id}`);
+            var base_url = window.location.origin;
+            window.location.replace(`${base_url}/chart.html?pollid=${docRef.id}`);
         })
         .catch(function (error) {
             console.error("Error adding document: ", error);
