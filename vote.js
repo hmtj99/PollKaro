@@ -49,6 +49,8 @@ docRef.get().then((doc) => {
     }
     else {
         console.log("No data found!");
+        var base_url = window.location.origin;
+        window.location.href = `${base_url}/PollKaro/404.html`;
     }
 
 }).catch(error => {
