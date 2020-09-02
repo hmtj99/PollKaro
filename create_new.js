@@ -50,7 +50,7 @@ const createNewPoll = (e) => {
         .then(function (docRef) {
             console.log("Document written with ID: ", docRef.id);
             var base_url = window.location.origin;
-            window.location.replace(`${base_url}/chart.html?pollid=${docRef.id}`);
+            window.location.replace(`${base_url}/PollKaro/chart.html?pollid=${docRef.id}`);
         })
         .catch(function (error) {
             console.error("Error adding document: ", error);

@@ -75,7 +75,7 @@ const incrementCount = (label) => {
     }).then(() => {
         alert("Your Response has been recorded. Thank You");
         var base_url = window.location.origin;
-        window.location.href = `${base_url}/index.html`;
+        window.location.href = `${base_url}/PollKaro/index.html`;
     });
 }
 
