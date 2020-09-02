@@ -5,7 +5,12 @@ const createNewButton = document.querySelector('.create-new-btn');
 var base_url = window.location.origin;
 
 joinButton.addEventListener('click', () => {
-    window.location.replace(`${base_url}/PollKaro/vote.html?pollid=${pollID.value}`);
+    if (pollID.value) {
+        window.location.replace(`${base_url}/PollKaro/vote.html?pollid=${pollID.value}`);
+    }
+    else {
+        alert("Poll ID cannot be empty");
+    }
 })
 
 createNewButton.addEventListener('click', () => {
