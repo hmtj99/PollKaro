@@ -23,6 +23,12 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const pollID = urlParams.get("pollid");
 console.log(pollID);
+
+if (pollID === "") {
+    var base_url = window.location.origin;
+    window.location.href = `${base_url}/PollKaro/404.html`;
+}
+
 let docRef = db.collection('polls').doc(`${pollID}`);
 
 
